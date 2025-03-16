@@ -20,11 +20,11 @@ jobs:
           kernel-branch: fifteen
           config:  everpal_defconfig
           arch: arm64
-          aosp-gcc: false
-          aosp-clang: false
+          aosp-gcc: true
+          aosp-clang: true
           ksu: true
           ksu-version: main
           android-version: 15
-          aosp-clang-version: r547379
+          aosp-clang-version: r498229b
           disable-lto: true
           anykernel3: true
