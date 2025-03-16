@@ -42,13 +42,13 @@ inputs:
     description: 'Android version.'
     required: true
     default: "15"
-  ksu:true
+  ksu:false
     description: 'KernelSU function support'
-    required: true
-    default: true
-  ksu-version:main
+    required: false
+    default: false
+  ksu-version:
     description: 'KernelSU default branch'
-    required: true
+    required: false
     default: "main"
   ksu-other:true
     required: true
@@ -105,18 +105,18 @@ inputs:
   other-gcc64-branch:
     required: false
     default: main
-  aosp-clang:true
+  aosp-clang:false
     description: 'Use clang from aosp project.'
-    required: true
-    default: true
-  aosp-clang-version:r522817
-    required: true
+    required: false
+    default: false
+  aosp-clang-version:
+    required: false
     default: "r522817"
-  other-clang-url:
-    required: false
+  other-clang-url:https://github.com/llvm/llvm-project
+    required: true
     default: ''
-  other-clang-branch:
-    required: false
+  other-clang-branch:main
+    required: true
     default: main
   anykernel3:true
     description: 'Package kernel use anykernel3.'
