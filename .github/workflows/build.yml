@@ -9,22 +9,22 @@ jobs:
       fail-fast: false
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: read&write
 
     steps:
     - name: Build Kernel
-      uses: dabao1955/kernel_build_action@main
+      uses: uxonxxnxnx/kernel_build_action_everpal@main
       with:
-          kernel-url: https://github.com/AcmeUI-Devices/android_kernel_xiaomi_cas
-          kernel-dir: msm-4.19
-          kernel-branch: taffy
-          config: cas_defconfig
+          kernel-url: https://github.com/jignesh2320/kernel_xiaomi_mt6833-fix.git
+          kernel-dir: device/xiaomi/everpal
+          kernel-branch: fifteen
+          config:  everpal_defconfig
           arch: arm64
           aosp-gcc: true
           aosp-clang: true
           ksu: true
-          ksu-version: main
-          android-version: 12
-          aosp-clang-version: r383902
+          ksu-version: v0.9.5
+          android-version: 15
+          aosp-clang-version: r522817
           disable-lto: true
           anykernel3: true
