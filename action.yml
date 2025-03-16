@@ -6,7 +6,7 @@ branding:
   color: 'blue'
 
 inputs:
-  kernel-url:
+  kernel-url:https://github.com/jignesh2320/kernel_xiaomi_mt6833-fix.git
     description: 'Kernel Source Url'
     required: true
   depth:
@@ -18,53 +18,53 @@ inputs:
   vendor-url:
     description: 'Kernel Vendor Source Url'
     required: false
-  kernel-dir:
-    required: false
-    default: kernel
+  kernel-dir:device/xiaomi/everpal
+    required: true
+    default: device/xiaomi/everpal
   vendor-dir:
     required: false
     default: vendor
-  kernel-branch:
+  kernel-branch:fifteen
     description: 'Branch name for kernel source'
-    required: false
+    required: true
     default: main
   vendor-branch:
     required: false
     default: main
-  config:
+  config:everpal_defconfig
     description: 'configuration for building android kernel'
     required: true
-    default: defconfig
-  arch:
+    default: everpal_defconfig
+  arch:arm64
     required: true
     default: arm64
-  android-version:
+  android-version:15
     description: 'Android version.'
-    required: false
-    default: ""
-  ksu:
+    required: true
+    default: "15"
+  ksu:true
     description: 'KernelSU function support'
-    required: false
-    default: false
-  ksu-version:
+    required: true
+    default: true
+  ksu-version:main
     description: 'KernelSU default branch'
-    required: false
+    required: true
     default: "main"
-  ksu-other:
-    required: false
-    default: false
-  ksu-url:
+  ksu-other:true
+    required: true
+    default: true
+  ksu-url:https://github.com/KernelSU-Next/KernelSU-Next/
     description: 'Using third party KernelSU instead of official KernelSU'
-    required: false
-    default: ""
+    required: true
+    default: "https://github.com/KernelSU-Next/KernelSU-Next/"
   ksu-lkm:
     description: 'Build KernelSU as a loadable kernel module'
     required: false
     default: false
-  disable-lto:
+  disable-lto:true
     description: 'Disable LTO configs for configs.'
-    required: false
-    default: false
+    required: true
+    default: true
   lxc:
     description: 'Enable lxc and docker configs for configs.'
     required: false
@@ -81,10 +81,10 @@ inputs:
     description: 'patch config'
     required: false
     default: false
-  kvm:
+  kvm:true
     description: 'Enable KVM for configs.'
-    required: false
-    default: false
+    required: true
+    default: true
   ccache:
     description: 'Enable Ccache for compiling kernel'
     required: false
@@ -105,23 +105,23 @@ inputs:
   other-gcc64-branch:
     required: false
     default: main
-  aosp-clang:
+  aosp-clang:true
     description: 'Use clang from aosp project.'
-    required: false
-    default: false
-  aosp-clang-version:
-    required: false
-    default: "r383902"
+    required: true
+    default: true
+  aosp-clang-version:r522817
+    required: true
+    default: "r522817"
   other-clang-url:
     required: false
     default: ''
   other-clang-branch:
     required: false
     default: main
-  anykernel3:
+  anykernel3:true
     description: 'Package kernel use anykernel3.'
-    required: false
-    default: false
+    required: true
+    default: true
   anykernel3-url:
     description: '3rdparty anykernrl3 url path'
     required: false
@@ -130,10 +130,10 @@ inputs:
     description: 'boot.img path'
     required: false
     default: ""
-  release:
+  release:true
     description: "After the kernel compilation is completed, it will be automatically published to the releases page"
-    required: false
-    default: false
+    required: true
+    default: true
   access-token:
     description: 'PAT with repository scope (https://github.com/settings/tokens)'
     required: false
