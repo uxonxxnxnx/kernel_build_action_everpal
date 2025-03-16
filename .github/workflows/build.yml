@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - name: Build Kernel
-      uses: uxonxxnxnx/kernel_build_action_everpal@main
+      uses: dabao1955/kernel_build_action@main
       with:
           kernel-url: https://github.com/jignesh2320/kernel_xiaomi_mt6833-fix.git
           kernel-dir: device/xiaomi/everpal
@@ -23,7 +23,7 @@ jobs:
           aosp-gcc: true
           aosp-clang: true
           ksu: true
-          ksu-version: v0.9.5
+          ksu-version: main
           android-version: 15
           aosp-clang-version: r522817
           disable-lto: true
