@@ -20,8 +20,8 @@ jobs:
           kernel-branch: fifteen
           config:  everpal_defconfig
           arch: arm64
-          aosp-gcc: true
-          aosp-clang: true
+          aosp-gcc: false
+          aosp-clang: false
           ksu: true
           ksu-version: main
           android-version: 15
